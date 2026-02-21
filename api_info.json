@@ -1,0 +1,45 @@
+{
+  "slug": "klarnacompayments",
+  "title": "Klarna Payments API V1",
+  "description": "The payments API is used to create a session to offer Klarna's payment methods as part of your checkout. As soon as the purchase is completed the order should be read and handled using the Order Management API. Read more on Klarna payments.",
+  "base_url": "https://api.klarna.com",
+  "endpoints": [
+    {
+      "path": "/payments/v1/authorizations/{authorizationToken}",
+      "method": "DELETE",
+      "operation_id": "cancelAuthorization",
+      "summary": "Cancel an existing authorization"
+    },
+    {
+      "path": "/payments/v1/authorizations/{authorizationToken}/customer-token",
+      "method": "POST",
+      "operation_id": "purchaseToken",
+      "summary": "Generate a consumer token"
+    },
+    {
+      "path": "/payments/v1/authorizations/{authorizationToken}/order",
+      "method": "POST",
+      "operation_id": "createOrder",
+      "summary": "Create a new order"
+    },
+    {
+      "path": "/payments/v1/sessions",
+      "method": "POST",
+      "operation_id": "createCreditSession",
+      "summary": "Create a new payment session"
+    },
+    {
+      "path": "/payments/v1/sessions/{session_id}",
+      "method": "GET",
+      "operation_id": "readCreditSession",
+      "summary": "Read an existing payment session"
+    },
+    {
+      "path": "/payments/v1/sessions/{session_id}",
+      "method": "POST",
+      "operation_id": "updateCreditSession",
+      "summary": "Update an existing payment session"
+    }
+  ],
+  "spec_url": "https://api.apis.guru/v2/specs/klarna.com/payments/1.0.0/openapi.json"
+}

@@ -1,19 +1,15 @@
 import Conf from 'conf';
 
 const config = new Conf({
-  projectName: 'klarnacompayments-cli',
+  projectName: 'ktmcp-klarnacompayments',
   schema: {
-    username: {
+    apiKey: {
       type: 'string',
       default: ''
     },
-    password: {
+    baseUrl: {
       type: 'string',
       default: ''
-    },
-    region: {
-      type: 'string',
-      default: 'eu'
     }
   }
 });
@@ -35,9 +31,7 @@ export function clearConfig() {
 }
 
 export function isConfigured() {
-  const username = config.get('username');
-  const password = config.get('password');
-  return !!(username && password);
+  return !!config.get('apiKey') || !!config.get('baseUrl');
 }
 
 export default config;

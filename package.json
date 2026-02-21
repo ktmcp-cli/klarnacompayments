@@ -1,17 +1,14 @@
 {
   "name": "@ktmcp-cli/klarnacompayments",
   "version": "1.0.0",
-  "description": "CLI for Klarna Payments API V1 - payment processing and order management",
+  "description": "Production-ready CLI for Klarna Payments API V1",
   "type": "module",
   "main": "src/index.js",
   "bin": {
     "klarnacompayments": "bin/klarnacompayments.js"
   },
   "keywords": [
-    "klarna",
-    "payments",
-    "orders",
-    "refunds",
+    "klarnacompayments",
     "cli",
     "api",
     "ktmcp"
